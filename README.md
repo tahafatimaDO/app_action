@@ -5,6 +5,10 @@
 
 **Note: This action only supports DOCR configuration changes for Auto-deploy**
 
+# Prerequisites
+- The app should already be present with the component you want to enable Auto Deploy.
+- There should be one successful deployment of the app before using GitHub Actions.
+
 # Usage
 ### Deploy via GH Action and let DigitalOcean App Platform build and deploy your app.
 - Get DigitalOcean Personal Access token by following this [instructions](https://docs.digitalocean.com/reference/api/create-personal-access-token/).**(skip this step if you already have DigitalOcean Personal Access Token)**
@@ -20,7 +24,6 @@
 - This step will trigger a deploy to your App on DigitalOcean App Platform
 
 ### Deploy an one or more app components from a DigitalOcean Container Registry (DOCR) 
-
 - Get DigitalOcean Personal Access token by following this [instructions](https://docs.digitalocean.com/reference/api/create-personal-access-token/)**(skip this step if you already have DigitalOcean Personal Access Token)**
 - Declare DigitalOcean Personal Access Token as DIGITALOCEAN_ACCESS_TOKEN variable in the [secrets](https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository) of github repository. 
 - Add this step to update DigitalOcean Container Registry configuration of single or multiple [component]((https://www.digitalocean.com/blog/build-component-based-apps-with-digitalocean-app-platform/)) in app_spec
